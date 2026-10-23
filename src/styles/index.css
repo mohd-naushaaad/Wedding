@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-emerald-deep: #063D32;
+    --color-emerald-dark: #082C26;
+    --color-gold-antique: #C6A45B;
+    --color-gold-champagne: #E7D6A3;
+    --color-ivory-warm: #F8F3E8;
+    --color-cream-soft: #EFE6D5;
+    --color-text-charcoal: #252720;
+  }
+
+  body {
+    background-color: #031713;
+    color: #F8F3E8;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom Royal Gold Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #031713;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8C6E2A;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C6A45B;
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #E7D6A3 0%, #FAF4E6 25%, #C6A45B 50%, #FAF4E6 75%, #A88537 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gold-subtle {
+    background: linear-gradient(180deg, #FAF4E6 0%, #C6A45B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-gold-metallic {
+    background: linear-gradient(135deg, #8C6E2A 0%, #C6A45B 30%, #FAF4E6 50%, #C6A45B 70%, #6B5420 100%);
+  }
+
+  .border-gold-ornate {
+    border-color: #C6A45B;
+    box-shadow: 0 0 15px rgba(198, 164, 91, 0.2), inset 0 0 15px rgba(198, 164, 91, 0.05);
+  }
+
+  .shadow-royal {
+    box-shadow: 0 20px 50px rgba(3, 23, 19, 0.8), 0 0 30px rgba(198, 164, 91, 0.15);
+  }
+
+  .islamic-pattern-bg {
+    background-color: #062821;
+    background-image: radial-gradient(rgba(198, 164, 91, 0.08) 1px, transparent 1px), radial-gradient(rgba(198, 164, 91, 0.04) 1px, #062821 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  .arabesque-star-pattern {
+    background-image: radial-gradient(ellipse at center, rgba(11, 79, 66, 0.6) 0%, rgba(3, 23, 19, 0.95) 100%);
+  }
+}
+
+/* Light sweep across card headers */
+.light-sweep-container {
+  position: relative;
+  overflow: hidden;
+}
+.light-sweep-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 245, 220, 0.15),
+    rgba(198, 164, 91, 0.25),
+    rgba(255, 245, 220, 0.15),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: sweep 7s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  0% {
+    left: -100%;
+  }
+  30%, 100% {
+    left: 200%;
+  }
+}
+
+/* Lantern swing motion */
+@keyframes lanternSwing {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+.animate-lantern-swing {
+  transform-origin: top center;
+  animation: lanternSwing 5s ease-in-out infinite;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .light-sweep-container::after {
+    display: none;
+  }
+  .animate-lantern-swing {
+    animation: none;
+  }
+}
