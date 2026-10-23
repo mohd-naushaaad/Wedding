@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Navigation, Phone, MessageCircle, ExternalLink } from 'lucide-react';
+import { MapPin, Navigation, Phone, MessageCircle, ExternalLink, Calendar, Building2 } from 'lucide-react';
 import { IslamicBorder } from '../ui/IslamicBorder';
 import { OrnamentalDivider } from '../ui/OrnamentalDivider';
 import { weddingConfig } from '../../config/wedding';
 
 export const VenueSection: React.FC = () => {
-  const { mainVenue } = weddingConfig.ceremony;
-  const { contacts } = weddingConfig;
+  const { mainVenue, receptionVenue } = weddingConfig.ceremony;
+  const { contacts, hosts } = weddingConfig;
 
   // Intent-friendly Google Maps link for mobile/desktop
   const mapsSearchUrl = mainVenue.googleMapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${mainVenue.name}, ${mainVenue.address}`)}`;
@@ -19,10 +19,10 @@ export const VenueSection: React.FC = () => {
           Location &amp; Coordinates
         </span>
         <h2 className="font-serif text-3xl sm:text-5xl font-bold text-gold-gradient tracking-tight">
-          Venue &amp; Directions
+          Venues &amp; Directions
         </h2>
         <p className="font-serif italic text-sm sm:text-base text-ivory/80 max-w-md mx-auto">
-          We eagerly await welcoming you into the majestic halls of celebration.
+          We eagerly await welcoming you into the joyous celebrations.
         </p>
         <OrnamentalDivider variant="crescent" className="w-40 mx-auto" />
       </div>
@@ -32,13 +32,15 @@ export const VenueSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.9 }}
+        className="space-y-8"
       >
+        {/* 1. Main Venue: Moon Star Marriage Hall (Solemn Nikah & Barat) */}
         <IslamicBorder variant="emerald" className="space-y-6">
           <div className="flex flex-col md:flex-row items-start justify-between gap-6">
             <div className="space-y-3 max-w-xl">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-serif uppercase tracking-wider border border-gold-500/30">
                 <MapPin className="w-3.5 h-3.5 text-gold-400" />
-                Principal Reception Venue
+                Solemn Nikah &amp; Barat Venue
               </span>
 
               <h3 className="font-serif text-2xl sm:text-3xl text-gold-gradient font-bold">
@@ -49,9 +51,10 @@ export const VenueSection: React.FC = () => {
                 {mainVenue.address}
               </p>
 
-              <p className="text-xs text-gold-400/80 font-serif italic">
-                {mainVenue.city} • Valet Parking &amp; Wheelchair Access Available
-              </p>
+              <div className="flex items-center gap-2 text-xs text-gold-400/90 font-serif">
+                <Calendar className="w-4 h-4 text-gold-400" />
+                <span>Wednesday, 25th November 2026 • 07:00 PM</span>
+              </div>
             </div>
 
             {/* Prominent Action Button */}
@@ -69,40 +72,97 @@ export const VenueSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Map Preview Card Placeholder / Embed fallback */}
-          <div className="relative w-full h-56 sm:h-72 rounded-xl overflow-hidden border border-gold-500/30 bg-[#041E18] flex items-center justify-center group">
-            {/* Visual Styling simulating nighttime aerial garden */}
-            <div className="absolute inset-0 bg-emerald-900/40 islamic-pattern-bg opacity-40 group-hover:opacity-60 transition-opacity" />
-            <div className="relative z-10 flex flex-col items-center text-center p-6 space-y-3">
-              <div className="w-14 h-14 rounded-full bg-emerald-950 border-2 border-gold-400 flex items-center justify-center text-gold-300 shadow-gold-glow animate-bounce">
-                <MapPin className="w-7 h-7" />
-              </div>
-              <h4 className="font-serif text-lg sm:text-xl text-ivory font-semibold">
-                {mainVenue.name}
-              </h4>
-              <p className="text-xs text-ivory/70 max-w-sm">
-                Tap below for real-time turn-by-turn navigation on your smartphone.
+          {/* Landmark Banner */}
+          <div className="p-4 rounded-xl bg-[#031713]/80 border border-gold-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span className="text-[11px] uppercase tracking-wider text-gold-400 block font-serif">
+                Prominent Landmarks
+              </span>
+              <p className="text-xs sm:text-sm text-ivory/80 font-sans mt-0.5">
+                Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas
               </p>
-              <a
-                href={mapsSearchUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs uppercase font-serif tracking-widest text-gold-300 hover:text-gold-100 underline decoration-gold-400/50 underline-offset-4"
-              >
-                Launch Navigation App
-              </a>
             </div>
+            <a
+              href={mapsSearchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase font-serif tracking-widest text-gold-300 hover:text-gold-100 underline decoration-gold-400/50 underline-offset-4"
+            >
+              Get Turn-by-Turn Navigation
+            </a>
           </div>
+        </IslamicBorder>
 
-          {/* Family Contact Coordinators */}
-          {contacts && contacts.length > 0 && (
-            <div className="border-t border-gold-500/20 pt-6">
-              <span className="text-xs uppercase tracking-widest text-gold-400 font-serif block mb-4">
-                Family Hospitality Coordinators
+        {/* 2. Reception (Walima) Venue & Bride's Residence Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Reception Venue */}
+          {receptionVenue && (
+            <IslamicBorder variant="emerald" className="space-y-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-[11px] font-serif uppercase tracking-wider border border-gold-500/30">
+                <Building2 className="w-3 h-3 text-gold-400" />
+                Reception (Walima) Venue
               </span>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {contacts.map((contact, idx) => (
+              <h4 className="font-serif text-xl sm:text-2xl text-gold-gradient font-bold">
+                {receptionVenue.name}
+              </h4>
+
+              <p className="text-xs sm:text-sm text-ivory/80 font-sans">
+                {receptionVenue.address}
+              </p>
+
+              <div className="text-xs text-gold-400 font-serif">
+                {receptionVenue.dateFormatted} • {receptionVenue.timing}
+              </div>
+
+              <div className="pt-2">
+                <a
+                  href={receptionVenue.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/15 hover:bg-gold-500/25 text-gold-300 text-xs font-serif uppercase tracking-wider border border-gold-500/30 transition-colors"
+                >
+                  <Navigation className="w-3.5 h-3.5" />
+                  <span>Reception Map</span>
+                </a>
+              </div>
+            </IslamicBorder>
+          )}
+
+          {/* Bride's Family Residence in Delhi */}
+          <IslamicBorder variant="emerald" className="space-y-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-800/40 text-emerald-300 text-[11px] font-serif uppercase tracking-wider border border-emerald-500/30">
+              <MapPin className="w-3 h-3 text-emerald-400" />
+              Bride's Family Residence (Delhi)
+            </span>
+
+            <h4 className="font-serif text-xl sm:text-2xl text-ivory font-bold">
+              {hosts.brideFatherName}
+            </h4>
+
+            <p className="text-xs sm:text-sm text-ivory/80 font-sans leading-relaxed">
+              {hosts.brideAddress}
+            </p>
+
+            <p className="text-xs text-gold-400/80 font-serif italic pt-1">
+              Near Labour Chowk, Pul Pehladpur, South East Delhi
+            </p>
+          </IslamicBorder>
+        </div>
+
+        {/* 3. Family Hospitality Coordinators */}
+        {contacts && contacts.length > 0 && (
+          <IslamicBorder variant="emerald" className="space-y-4">
+            <span className="text-xs uppercase tracking-widest text-gold-400 font-serif block">
+              Hospitality &amp; Family Coordinators
+            </span>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {contacts.map((contact, idx) => {
+                const isPhoneValid = contact.phone && contact.phone.includes('+');
+                const cleanPhone = contact.phone.replace(/[^0-9]/g, '');
+
+                return (
                   <div
                     key={idx}
                     className="p-4 rounded-xl bg-emerald-900/40 border border-gold-500/15 flex items-center justify-between gap-3"
@@ -119,32 +179,34 @@ export const VenueSection: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={`tel:${contact.phone.replace(/\s+/g, '')}`}
-                        className="p-2 rounded-full bg-gold-500/15 hover:bg-gold-500/30 text-gold-300 border border-gold-500/30 transition-colors"
-                        title={`Call ${contact.name}`}
-                        aria-label={`Call ${contact.name}`}
-                      >
-                        <Phone className="w-4 h-4" />
-                      </a>
-                      <a
-                        href={`https://wa.me/${contact.phone.replace(/[^0-9]/g, '')}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-emerald-800/80 hover:bg-emerald-700 text-emerald-200 border border-emerald-500/30 transition-colors"
-                        title={`WhatsApp ${contact.name}`}
-                        aria-label={`WhatsApp ${contact.name}`}
-                      >
-                        <MessageCircle className="w-4 h-4" />
-                      </a>
-                    </div>
+                    {isPhoneValid && (
+                      <div className="flex items-center gap-2">
+                        <a
+                          href={`tel:${cleanPhone}`}
+                          className="p-2 rounded-full bg-gold-500/15 hover:bg-gold-500/30 text-gold-300 border border-gold-500/30 transition-colors"
+                          title={`Call ${contact.name}`}
+                          aria-label={`Call ${contact.name}`}
+                        >
+                          <Phone className="w-4 h-4" />
+                        </a>
+                        <a
+                          href={`https://wa.me/${cleanPhone}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-emerald-800/80 hover:bg-emerald-700 text-emerald-200 border border-emerald-500/30 transition-colors"
+                          title={`WhatsApp ${contact.name}`}
+                          aria-label={`WhatsApp ${contact.name}`}
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                        </a>
+                      </div>
+                    )}
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-          )}
-        </IslamicBorder>
+          </IslamicBorder>
+        )}
       </motion.div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
 import { IslamicBorder } from '../ui/IslamicBorder';
 import { OrnamentalDivider } from '../ui/OrnamentalDivider';
 import { weddingConfig } from '../../config/wedding';
@@ -29,45 +30,86 @@ export const FamilyInvitationSection: React.FC = () => {
               The Bride's Family Cordially Invites You
             </span>
 
-            <h3 className="font-serif text-2xl sm:text-3xl text-charcoal font-bold tracking-tight">
-              {hosts.brideFatherName}
-              <span className="block text-base sm:text-lg text-gold-700 font-normal italic my-1">
-                &amp;
+            {/* Host: Bride's Father & Address */}
+            <div className="space-y-1">
+              <span className="text-xs font-serif italic text-gold-800 block">
+                From ...
               </span>
-              {hosts.brideMotherName}
-            </h3>
+              <h3 className="font-serif text-2xl sm:text-4xl text-charcoal font-bold tracking-tight">
+                {hosts.brideFatherName}
+              </h3>
+              <p className="text-xs sm:text-sm text-charcoal/80 font-sans max-w-md mx-auto leading-relaxed pt-1">
+                {hosts.brideAddress}
+              </p>
+            </div>
 
-            <p className="font-serif italic text-sm sm:text-base text-charcoal/80 max-w-lg mx-auto leading-relaxed">
+            <p className="font-serif italic text-sm sm:text-base text-charcoal/85 max-w-lg mx-auto leading-relaxed pt-2">
               {hosts.cordialInvitationText}
             </p>
 
-            <div className="py-2">
-              <h4 className="font-serif text-3xl sm:text-4xl text-emerald-900 font-bold tracking-tight">
-                {couple.brideName}
-              </h4>
-              <p className="text-xs sm:text-sm font-serif uppercase tracking-widest text-gold-700 mt-1">
-                with
-              </p>
-              <h4 className="font-serif text-2xl sm:text-3xl text-charcoal font-semibold mt-1">
-                {couple.groomName}
-              </h4>
+            {/* Bride and Groom with Full Lineage and Address */}
+            <div className="py-4 px-3 sm:px-6 rounded-2xl bg-white/60 border border-gold-500/30 shadow-inner space-y-5">
+              {/* 1. BRIDE (FIRST) */}
+              <div className="text-center space-y-1">
+                <span className="text-[11px] uppercase tracking-widest text-emerald-800 font-serif font-bold">
+                  The Bride
+                </span>
+                <h4 className="font-serif text-3xl sm:text-4xl text-emerald-950 font-bold tracking-tight">
+                  {couple.brideFullName || couple.brideName}
+                </h4>
+                <p className="text-xs sm:text-sm font-serif font-medium text-gold-900">
+                  {couple.brideParentsTitle}
+                </p>
+                <p className="text-[11px] sm:text-xs text-charcoal/70 font-sans max-w-md mx-auto">
+                  {couple.brideAddress}
+                </p>
+              </div>
+
+              {/* Ornate Heart Connector */}
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-gold-600" />
+                <span className="font-serif text-lg text-gold-700 italic font-semibold flex items-center gap-1">
+                  <Heart className="w-4 h-4 text-gold-600 fill-gold-600/20" />
+                  <span>weds</span>
+                </span>
+                <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-gold-600" />
+              </div>
+
+              {/* 2. GROOM */}
+              <div className="text-center space-y-1">
+                <span className="text-[11px] uppercase tracking-widest text-gold-800 font-serif font-bold">
+                  The Groom
+                </span>
+                <h4 className="font-serif text-2xl sm:text-3xl text-charcoal font-bold tracking-tight">
+                  {couple.groomFullName || couple.groomName}
+                </h4>
+                <p className="text-xs sm:text-sm font-serif font-medium text-gold-900">
+                  {couple.groomParentsTitle} {couple.groomFamilyFirm ? `(${couple.groomFamilyFirm})` : ''}
+                </p>
+                <p className="text-[11px] sm:text-xs text-charcoal/70 font-sans max-w-md mx-auto">
+                  {couple.groomAddress}
+                </p>
+              </div>
             </div>
 
             <OrnamentalDivider variant="flower" color="gold" className="w-36 mx-auto my-3" />
 
-            {/* Honored Grandparents Remembrances */}
-            {hosts.honoredGrandparents && hosts.honoredGrandparents.length > 0 && (
-              <div className="pt-2">
-                <span className="text-[11px] uppercase tracking-widest text-gold-800/80 font-serif block mb-1">
-                  Seeking the blessings of
-                </span>
-                <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs sm:text-sm text-charcoal/70 font-serif italic">
-                  {hosts.honoredGrandparents.map((name, i) => (
-                    <span key={i}>{name}</span>
-                  ))}
-                </div>
+            {/* R.S.V.P Section from the Card */}
+            <div className="pt-2">
+              <span className="text-[11px] uppercase tracking-widest text-gold-900 font-serif font-bold block mb-1">
+                R. S. V. P. (Bride's Side)
+              </span>
+              <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-1 text-sm text-charcoal font-serif font-medium">
+                {weddingConfig.rsvp.brideSideRsvp.map((name, i) => (
+                  <React.Fragment key={i}>
+                    <span>{name}</span>
+                    {i < weddingConfig.rsvp.brideSideRsvp.length - 1 && (
+                      <span className="text-gold-700">•</span>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
-            )}
+            </div>
 
             <div className="pt-4 border-t border-gold-500/30">
               <p className="font-serif text-sm sm:text-base text-gold-900 font-semibold tracking-wider uppercase">

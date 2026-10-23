@@ -261,6 +261,27 @@ export const RsvpSection: React.FC = () => {
                   </div>
                 )}
 
+                {/* Dual R.S.V.P Committee Display from Cards */}
+                <div className="p-4 rounded-xl bg-[#031713]/70 border border-gold-500/20 space-y-3">
+                  <div>
+                    <span className="text-[11px] uppercase tracking-wider text-gold-400 font-serif block font-bold">
+                      R.S.V.P (Bride's Side — First):
+                    </span>
+                    <p className="text-xs sm:text-sm text-ivory/90 font-serif font-medium mt-0.5">
+                      {weddingConfig.rsvp.brideSideRsvp.join(' • ')}
+                    </p>
+                  </div>
+
+                  <div className="border-t border-gold-500/15 pt-2">
+                    <span className="text-[11px] uppercase tracking-wider text-gold-400/80 font-serif block">
+                      R.S.V.P (Groom's Side):
+                    </span>
+                    <p className="text-xs text-ivory/70 font-serif mt-0.5">
+                      {weddingConfig.rsvp.groomSideRsvp.join(' • ')}
+                    </p>
+                  </div>
+                </div>
+
                 {/* Submit Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <button

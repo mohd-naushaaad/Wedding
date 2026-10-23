@@ -19,8 +19,11 @@ export const NamesSection: React.FC = () => {
           Solemn Union of Hearts
         </span>
 
-        {/* Bride's Name (Centerpiece from Host Family) */}
+        {/* 1. Bride's Name (Centerpiece - Kept First) */}
         <div className="mt-6 mb-2">
+          <span className="text-[11px] uppercase tracking-widest text-emerald-400 font-serif block mb-1">
+            The Bride
+          </span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,28 +31,32 @@ export const NamesSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gold-gradient"
           >
-            {couple.brideName}
+            {couple.brideFullName || couple.brideName}
           </motion.h2>
-          {couple.brideFullName && couple.brideFullName !== couple.brideName && (
-            <p className="text-xs sm:text-sm font-serif italic text-gold-300/80 mt-1">
-              ({couple.brideFullName})
-            </p>
-          )}
+          <p className="text-xs sm:text-sm font-serif text-gold-300 font-medium mt-1">
+            {couple.brideParentsTitle}
+          </p>
+          <p className="text-[11px] sm:text-xs text-ivory/70 font-sans mt-0.5">
+            {couple.brideAddress}
+          </p>
         </div>
 
-        {/* Ornate Connector */}
-        <div className="my-3 flex items-center justify-center">
+        {/* Ornate Weds Connector */}
+        <div className="my-5 flex items-center justify-center">
           <div className="flex items-center space-x-3">
-            <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-r from-transparent to-gold-400" />
-            <span className="font-cormorant italic text-2xl sm:text-3xl text-gold-300 font-semibold px-2">
-              &amp;
+            <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-gold-400" />
+            <span className="font-serif italic text-xl sm:text-2xl text-gold-300 font-semibold px-2">
+              weds
             </span>
-            <div className="w-10 sm:w-16 h-[1px] bg-gradient-to-l from-transparent to-gold-400" />
+            <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-gold-400" />
           </div>
         </div>
 
-        {/* Groom's Name */}
+        {/* 2. Groom's Name */}
         <div className="mt-2 mb-6">
+          <span className="text-[11px] uppercase tracking-widest text-gold-400/80 font-serif block mb-1">
+            The Groom
+          </span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,13 +64,14 @@ export const NamesSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gold-gradient"
           >
-            {couple.groomName}
+            {couple.groomFullName || couple.groomName}
           </motion.h2>
-          {couple.groomFullName && couple.groomFullName !== couple.groomName && (
-            <p className="text-xs sm:text-sm font-serif italic text-gold-300/80 mt-1">
-              ({couple.groomFullName})
-            </p>
-          )}
+          <p className="text-xs sm:text-sm font-serif text-gold-300 font-medium mt-1">
+            {couple.groomParentsTitle} {couple.groomFamilyFirm ? `(${couple.groomFamilyFirm})` : ''}
+          </p>
+          <p className="text-[11px] sm:text-xs text-ivory/70 font-sans mt-0.5">
+            {couple.groomAddress}
+          </p>
         </div>
 
         <OrnamentalDivider variant="full" className="my-6 max-w-xs mx-auto" />
