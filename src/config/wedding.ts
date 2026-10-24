@@ -10,7 +10,7 @@ import { WeddingConfig } from '../types/wedding';
 export const weddingConfig: WeddingConfig = {
   couple: {
     // Bride's Details (Always First)
-    brideName: "Sahiba",
+    brideName: "Sahiba Khatoon",
     brideFullName: "Sahiba Khatoon",
     brideHonorific: "Daughter of",
     brideParentsTitle: "Daughter of Mohd Nizamuddin",
@@ -184,7 +184,7 @@ export const weddingConfig: WeddingConfig = {
   ],
 
   share: {
-    title: "Wedding Invitation — Sahiba & Abdul Qadir",
+    title: "Wedding Invitation — Sahiba Khatoon & Abdul Qadir",
     defaultMessage: "Assalamu Alaikum wa Rahmatullah! You are cordially invited by Mohd Nizamuddin & Family to celebrate the Nikah of our beloved daughter Sahiba Khatoon with Abdul Qadir on Wednesday, 25th November 2026 at Moon Star Marriage Hall, Akbarpur, Rohtas, Bihar. We look forward to your presence and blessed prayers (Dua). View our royal digital invitation here: ",
     publicUrl: typeof window !== 'undefined' ? window.location.href : "https://royal-nikah-sahiba-abdulqadir.com"
   },

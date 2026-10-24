@@ -54,7 +54,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
             </span>
 
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-gold-gradient font-bold tracking-tight mb-2">
-              {weddingConfig.couple.brideName}
+              {weddingConfig.couple.brideFullName || weddingConfig.couple.brideName}
             </h1>
             <div className="text-gold-400 font-serif italic text-lg sm:text-xl my-1">
               &amp;

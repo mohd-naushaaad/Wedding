@@ -31,7 +31,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onScrollToTop })
           </span>
 
           <h3 className="font-serif text-3xl sm:text-5xl font-bold text-gold-gradient tracking-tight">
-            {couple.brideName} &amp; {couple.groomName}
+            {couple.brideFullName || couple.brideName} &amp; {couple.groomFullName || couple.groomName}
           </h3>
 
           <p className="font-serif italic text-sm text-ivory/80 mt-1">
@@ -46,7 +46,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onScrollToTop })
             Hosted with Love by {hosts.brideFamilyName}
           </p>
           <p className="text-[11px] text-ivory/60 font-sans mt-2">
-            New Delhi, India • With Prayers for Peace, Harmony &amp; Barakah
+            Delhi, India • With Prayers for Peace, Harmony &amp; Barakah
           </p>
         </div>
 
