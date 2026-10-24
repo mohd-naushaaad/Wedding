@@ -13,8 +13,8 @@ export const weddingConfig: WeddingConfig = {
     brideName: "Sahiba",
     brideFullName: "Sahiba Khatoon",
     brideHonorific: "Daughter of",
-    brideParentsTitle: "Daughter of Md. Nizamuddin",
-    brideFatherName: "Md. Nizamuddin",
+    brideParentsTitle: "Daughter of Mohd Nizamuddin",
+    brideFatherName: "Mohd Nizamuddin",
     brideAddress: "Delhi",
 
     // Groom's Details
@@ -34,12 +34,12 @@ export const weddingConfig: WeddingConfig = {
   hosts: {
     invitationPreamble: "Bismillahir Rahmanir Raheem",
     invitationHeader: "Wedding Invitation",
-    brideFatherName: "Md. Nizamuddin",
-    brideFamilyName: "The Family of Md. Nizamuddin",
+    brideFatherName: "Mohd Nizamuddin",
+    brideFamilyName: "The Family of Mohd Nizamuddin",
     brideAddress: "Delhi",
     cordialInvitationText: "Request the honour of your presence and heartfelt prayers (Dua) at the solemn Nikah ceremony of their beloved daughter",
     closingFamilyMessage: "Your gracious presence, prayers, and blessings will be the greatest gift as our daughter begins this sacred new chapter of her life.",
-    closingFamilySignOff: "With warm regards & prayers,\nMd. Nizamuddin, Naushad, Sahil\n& All Relatives and Friends\nDelhi"
+    closingFamilySignOff: "With warm regards & prayers,\nMohd Nizamuddin (Father), Mohd Naushad & Mohd Sahil (Brothers)\n& All Relatives and Friends\nDelhi"
   },
 
   ceremony: {
@@ -154,27 +154,27 @@ export const weddingConfig: WeddingConfig = {
     deadline: "18th November 2026",
     maxGuestsPerSubmission: 8,
     allowDietaryRequirements: true,
-    whatsappNumberForDirectRsvp: "+916200511384", // Beauty Tailor / Family WhatsApp
+    whatsappNumberForDirectRsvp: "+919990198569", // Father Mohd Nizamuddin WhatsApp
     apiEndpoint: undefined,
-    brideSideRsvp: ["Naushad", "Sahil", "All Relatives and Friends"],
+    brideSideRsvp: ["Mohd Naushad (Brother)", "Mohd Sahil (Brother)", "All Relatives and Friends"],
     groomSideRsvp: ["Ayub Ahmad", "Sajjad Ahmad", "Irshad Ahmad", "Md. Tahir", "Ashraf Ali", "Ahmad Ali"]
   },
 
   contacts: [
     {
-      name: "Naushad",
-      relation: "Bride's Family Coordinator",
-      phone: "Delhi / Rohtas"
-    },
-    {
-      name: "Sahil",
-      relation: "Bride's Family Coordinator",
-      phone: "Delhi / Rohtas"
-    },
-    {
-      name: "Md. Nizamuddin",
+      name: "Mohd Nizamuddin",
       relation: "Bride's Father",
-      phone: "Delhi"
+      phone: "+91 99901 98569"
+    },
+    {
+      name: "Mohd Naushad",
+      relation: "Bride's Brother",
+      phone: "Delhi / Rohtas"
+    },
+    {
+      name: "Mohd Sahil",
+      relation: "Bride's Brother",
+      phone: "Delhi / Rohtas"
     },
     {
       name: "Abdul Quaiyum Idrisi (Beauty Tailor)",
@@ -185,7 +185,7 @@ export const weddingConfig: WeddingConfig = {
 
   share: {
     title: "Wedding Invitation — Sahiba & Abdul Qadir",
-    defaultMessage: "Assalamu Alaikum wa Rahmatullah! You are cordially invited by Md. Nizamuddin & Family to celebrate the Nikah of our beloved daughter Sahiba Khatoon with Abdul Qadir on Wednesday, 25th November 2026 at Moon Star Marriage Hall, Akbarpur, Rohtas, Bihar. We look forward to your presence and blessed prayers (Dua). View our royal digital invitation here: ",
+    defaultMessage: "Assalamu Alaikum wa Rahmatullah! You are cordially invited by Mohd Nizamuddin & Family to celebrate the Nikah of our beloved daughter Sahiba Khatoon with Abdul Qadir on Wednesday, 25th November 2026 at Moon Star Marriage Hall, Akbarpur, Rohtas, Bihar. We look forward to your presence and blessed prayers (Dua). View our royal digital invitation here: ",
     publicUrl: typeof window !== 'undefined' ? window.location.href : "https://royal-nikah-sahiba-abdulqadir.com"
   },
 
