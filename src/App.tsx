@@ -3,7 +3,6 @@ import { SceneFallback } from './scenes/SceneFallback';
 import { WelcomeScreen } from './components/invitation/WelcomeScreen';
 import { BismillahSection } from './components/invitation/BismillahSection';
 import { NamesSection } from './components/invitation/NamesSection';
-import { FamilyInvitationSection } from './components/invitation/FamilyInvitationSection';
 import { WeddingCountdown } from './components/countdown/WeddingCountdown';
 import { EventsTimeline } from './components/events/EventsTimeline';
 import { VenueSection } from './components/venue/VenueSection';
@@ -104,9 +103,6 @@ export const App: React.FC = () => {
 
           {/* Scene 4: Bride and Groom Names */}
           <NamesSection />
-
-          {/* Scene 5: Invitation from the Bride's Family */}
-          <FamilyInvitationSection />
 
           {/* Scene 6: Wedding Date and Countdown */}
           <WeddingCountdown />
