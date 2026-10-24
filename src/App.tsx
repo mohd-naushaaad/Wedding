@@ -9,9 +9,8 @@ import { EventsTimeline } from './components/events/EventsTimeline';
 import { VenueSection } from './components/venue/VenueSection';
 import { FamilyMessageSection } from './components/invitation/FamilyMessageSection';
 import { ClosingSection } from './components/invitation/ClosingSection';
-import { Navbar } from './components/layout/Navbar';
 import { FloatingActions } from './components/layout/FloatingActions';
-import { useWebGLSupport, GraphicMode } from './hooks/useWebGLSupport';
+import { useWebGLSupport } from './hooks/useWebGLSupport';
 
 // Dynamic Import for 3D Scene
 const GrandEntranceCanvas = lazy(() =>
@@ -21,7 +20,7 @@ const GrandEntranceCanvas = lazy(() =>
 );
 
 export const App: React.FC = () => {
-  const { mode, setMode, isSupported, prefersReducedMotion } = useWebGLSupport();
+  const { mode, isSupported, prefersReducedMotion } = useWebGLSupport();
 
   const [isOpened, setIsOpened] = useState(false);
   const [openProgress, setOpenProgress] = useState(0);
@@ -86,13 +85,6 @@ export const App: React.FC = () => {
         )}
       </div>
 
-      {/* Navigation Bar */}
-      <Navbar
-        isOpened={isOpened}
-        graphicMode={mode}
-        onChangeGraphicMode={(m: GraphicMode) => setMode(m)}
-      />
-
       {/* Scene 1: Welcome & Cinematic Door Unveiling Screen */}
       <WelcomeScreen
         isOpened={isOpened}
@@ -106,7 +98,7 @@ export const App: React.FC = () => {
           isOpened ? 'opacity-100' : 'opacity-0 pointer-events-none max-h-screen overflow-hidden'
         }`}
       >
-        <div className="pt-24 sm:pt-32 pb-16 space-y-12 sm:space-y-20">
+        <div className="pt-10 sm:pt-16 pb-16 space-y-12 sm:space-y-20">
           {/* Scene 3: Bismillah and Invitation Introduction */}
           <BismillahSection />
 
