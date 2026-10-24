@@ -79,7 +79,7 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onScrollToTop })
 
         {/* Subtle Cultural Heritage Credit */}
         <div className="pt-8 text-[11px] text-gold-500/40 font-serif">
-          Royal Nikah Digital Invitation Experience • Designed with Reverence &amp; Elegance
+          Wedding Invitation • Designed with Reverence &amp; Elegance
         </div>
       </motion.div>
     </footer>

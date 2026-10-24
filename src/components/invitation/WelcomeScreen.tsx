@@ -72,7 +72,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
             </div>
 
             <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-gold-300 font-serif font-light mb-2">
-              The Royal Nikah of
+              Wedding Invitation
             </span>
 
             <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-gold-gradient font-bold tracking-tight mb-2">

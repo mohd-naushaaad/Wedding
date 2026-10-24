@@ -2,7 +2,7 @@ import { WeddingConfig } from '../types/wedding';
 
 /**
  * =======================================================================
- * ROYAL NIKAH WEDDING CONFIGURATION — SAHIBA & ABDUL QADIR
+ * WEDDING INVITATION CONFIGURATION — SAHIBA & ABDUL QADIR
  * =======================================================================
  * Host: Bride's Family (Md. Nizamuddin, South East Delhi)
  * All Bride's details are prioritized and presented first.
@@ -170,7 +170,7 @@ export const weddingConfig: WeddingConfig = {
   ],
 
   share: {
-    title: "Royal Nikah Invitation — Sahiba & Abdul Qadir",
+    title: "Wedding Invitation — Sahiba & Abdul Qadir",
     defaultMessage: "Assalamu Alaikum wa Rahmatullah! You are cordially invited by Md. Nizamuddin & Family to celebrate the Nikah of our beloved daughter Sahiba Khatoon with Abdul Qadir on Wednesday, 25th November 2026 at Moon Star Marriage Hall, Akbarpur, Rohtas, Bihar. We look forward to your presence and blessed prayers (Dua). View our royal digital invitation here: ",
     publicUrl: typeof window !== 'undefined' ? window.location.href : "https://royal-nikah-sahiba-abdulqadir.com"
   },

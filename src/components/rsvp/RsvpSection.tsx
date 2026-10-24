@@ -84,7 +84,7 @@ export const RsvpSection: React.FC = () => {
   const handleSendWhatsAppRsvp = () => {
     const phone = (rsvp.whatsappNumberForDirectRsvp || '').replace(/[^0-9]/g, '');
     const text = encodeURIComponent(
-      `Assalamu Alaikum! RSVP from *${formData.fullName || 'Guest'}* for the Royal Nikah of Fatima & Zayd:\n\nAttendance: *${formData.attendance === 'accept' ? 'Joyfully Accept' : 'Regretfully Decline'}*\nGuests: *${formData.guestCount}*\nMessage: ${formData.message || 'May Allah bless the couple with infinite barakah!'}`
+      `Assalamu Alaikum! RSVP from *${formData.fullName || 'Guest'}* for the Wedding of Sahiba & Abdul Qadir:\n\nAttendance: *${formData.attendance === 'accept' ? 'Joyfully Accept' : 'Regretfully Decline'}*\nGuests: *${formData.guestCount}*\nMessage: ${formData.message || 'May Allah bless the couple with infinite barakah!'}`
     );
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };

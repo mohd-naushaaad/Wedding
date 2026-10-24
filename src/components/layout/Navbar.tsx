@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {initials}
           </div>
           <span className="font-serif text-sm tracking-widest uppercase text-gold-200 hidden sm:inline">
-            Royal Nikah
+            Wedding Invitation
           </span>
         </a>
 
