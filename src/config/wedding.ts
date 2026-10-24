@@ -15,7 +15,7 @@ export const weddingConfig: WeddingConfig = {
     brideHonorific: "Daughter of",
     brideParentsTitle: "Daughter of Md. Nizamuddin",
     brideFatherName: "Md. Nizamuddin",
-    brideAddress: "E-133, Second Floor, Flat No - 103, MB Road, Near Labour Chowk, Pul Pehladpur, South East Delhi, Delhi - 110044",
+    brideAddress: "Delhi",
 
     // Groom's Details
     groomName: "Abdul Qadir",
@@ -36,10 +36,10 @@ export const weddingConfig: WeddingConfig = {
     invitationHeader: "Wedding Invitation",
     brideFatherName: "Md. Nizamuddin",
     brideFamilyName: "The Family of Md. Nizamuddin",
-    brideAddress: "E-133, Second Floor, Flat No - 103, MB Road, Near Labour Chowk, Pul Pehladpur, South East Delhi, Delhi - 110044",
+    brideAddress: "Delhi",
     cordialInvitationText: "Request the honour of your presence and heartfelt prayers (Dua) at the solemn Nikah ceremony of their beloved daughter",
     closingFamilyMessage: "Your gracious presence, prayers, and blessings will be the greatest gift as our daughter begins this sacred new chapter of her life.",
-    closingFamilySignOff: "With warm regards & prayers,\nMd. Nizamuddin, Naushad, Sahil\n& All Relatives and Friends\nPul Pehladpur, South East Delhi"
+    closingFamilySignOff: "With warm regards & prayers,\nMd. Nizamuddin, Naushad, Sahil\n& All Relatives and Friends\nDelhi"
   },
 
   ceremony: {
@@ -71,7 +71,7 @@ export const weddingConfig: WeddingConfig = {
       startTime: "07:00 PM",
       endTime: "10:30 PM",
       venueName: "Bride's Residence / Marriage Lawn",
-      venueAddress: "Akbarpur / Pul Pehladpur Celebration Lawn",
+      venueAddress: "Akbarpur Celebration Lawn",
       dressCode: "Festive Yellow / Traditional Elegance",
       note: "Family gathering with dinner and traditional wedding singing.",
       googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Akbarpur+Rohtas+Bihar",
@@ -159,8 +159,8 @@ export const weddingConfig: WeddingConfig = {
     },
     {
       name: "Md. Nizamuddin",
-      relation: "Bride's Father (Pul Pehladpur, Delhi)",
-      phone: "E-133, Flat 103, MB Road, Delhi"
+      relation: "Bride's Father",
+      phone: "Delhi"
     },
     {
       name: "Abdul Quaiyum Idrisi (Beauty Tailor)",

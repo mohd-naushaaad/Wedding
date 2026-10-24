@@ -101,7 +101,7 @@ export const VenueSection: React.FC = () => {
               Bride's Family Residence (From .. Md Nizamuddin)
             </span>
             <span className="text-xs text-gold-400/80 font-serif">
-              Host Family • South East Delhi
+              Host Family • Delhi
             </span>
           </div>
 
@@ -109,11 +109,8 @@ export const VenueSection: React.FC = () => {
             <h4 className="font-serif text-xl sm:text-2xl text-gold-gradient font-bold">
               {hosts.brideFatherName}
             </h4>
-            <p className="text-xs sm:text-sm text-ivory/90 font-sans leading-relaxed mt-1">
+            <p className="text-sm sm:text-base text-ivory/90 font-serif font-medium mt-1">
               {hosts.brideAddress}
-            </p>
-            <p className="text-xs text-gold-400/80 font-serif italic mt-1">
-              Near Labour Chowk, Pul Pehladpur, South East Delhi, Delhi - 110044
             </p>
           </div>
         </IslamicBorder>
