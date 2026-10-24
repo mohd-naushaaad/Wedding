@@ -8,7 +8,6 @@ import { WeddingCountdown } from './components/countdown/WeddingCountdown';
 import { EventsTimeline } from './components/events/EventsTimeline';
 import { VenueSection } from './components/venue/VenueSection';
 import { FamilyMessageSection } from './components/invitation/FamilyMessageSection';
-import { RsvpSection } from './components/rsvp/RsvpSection';
 import { ClosingSection } from './components/invitation/ClosingSection';
 import { Navbar } from './components/layout/Navbar';
 import { FloatingActions } from './components/layout/FloatingActions';
@@ -142,9 +141,6 @@ export const App: React.FC = () => {
 
           {/* Scene 9: Family Message */}
           <FamilyMessageSection />
-
-          {/* Scene 10: RSVP */}
-          <RsvpSection />
 
           {/* Scene 12: Final Closing Scene */}
           <ClosingSection onScrollToTop={handleScrollToTop} />

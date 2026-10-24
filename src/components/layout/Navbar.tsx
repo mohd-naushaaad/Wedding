@@ -51,9 +51,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             <a href="#venue" className="hover:text-gold-300 transition-colors">
               Venue
             </a>
-            <a href="#rsvp" className="hover:text-gold-300 transition-colors">
-              RSVP
-            </a>
+            {weddingConfig.rsvp.enabled && (
+              <a href="#rsvp" className="hover:text-gold-300 transition-colors">
+                RSVP
+              </a>
+            )}
           </nav>
         )}
 

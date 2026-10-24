@@ -136,7 +136,7 @@ export const weddingConfig: WeddingConfig = {
   ],
 
   rsvp: {
-    enabled: true,
+    enabled: false,
     deadline: "18th November 2026",
     maxGuestsPerSubmission: 8,
     allowDietaryRequirements: true,
