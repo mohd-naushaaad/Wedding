@@ -98,7 +98,7 @@ export const VenueSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-gold-500/20 pb-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-800/40 text-emerald-300 text-xs font-serif uppercase tracking-wider border border-emerald-500/30">
               <Home className="w-3.5 h-3.5 text-emerald-400" />
-              Bride's Family Residence (From .. Md Nizamuddin)
+              Bride's Family Residence (From .. {hosts.brideFatherName})
             </span>
             <span className="text-xs text-gold-400/80 font-serif">
               Host Family • Delhi

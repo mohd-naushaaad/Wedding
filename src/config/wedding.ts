@@ -4,7 +4,7 @@ import { WeddingConfig } from '../types/wedding';
  * =======================================================================
  * WEDDING INVITATION CONFIGURATION — SAHIBA & ABDUL QADIR
  * =======================================================================
- * Host: Bride's Family (Md. Nizamuddin, South East Delhi)
+ * Host: Bride's Family (Mohd Nizamuddin, Delhi)
  * All Bride's details are prioritized and presented first.
  */
 export const weddingConfig: WeddingConfig = {
