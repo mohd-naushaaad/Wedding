@@ -7,7 +7,6 @@ import { WeddingCountdown } from './components/countdown/WeddingCountdown';
 import { EventsTimeline } from './components/events/EventsTimeline';
 import { VenueSection } from './components/venue/VenueSection';
 import { FamilyMessageSection } from './components/invitation/FamilyMessageSection';
-import { ClosingSection } from './components/invitation/ClosingSection';
 import { FloatingActions } from './components/layout/FloatingActions';
 import { useWebGLSupport } from './hooks/useWebGLSupport';
 
@@ -61,10 +60,6 @@ export const App: React.FC = () => {
     };
   }, []);
 
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const useFallbackScene = mode === 'fallback' || !isSupported;
 
   return (
@@ -115,9 +110,6 @@ export const App: React.FC = () => {
 
           {/* Scene 9: Family Message */}
           <FamilyMessageSection />
-
-          {/* Scene 12: Final Closing Scene */}
-          <ClosingSection onScrollToTop={handleScrollToTop} />
         </div>
       </main>
 
