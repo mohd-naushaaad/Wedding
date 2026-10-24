@@ -40,7 +40,7 @@ export const VenueSection: React.FC = () => {
             <div className="space-y-3 max-w-xl">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-serif uppercase tracking-wider border border-gold-500/30">
                 <MapPin className="w-3.5 h-3.5 text-gold-400" />
-                Solemn Nikah &amp; Barat Venue
+                Arrival of Barat &amp; Solemn Nikah Venue
               </span>
 
               <h3 className="font-serif text-2xl sm:text-3xl text-gold-gradient font-bold">
@@ -53,7 +53,7 @@ export const VenueSection: React.FC = () => {
 
               <div className="flex items-center gap-2 text-xs text-gold-400/90 font-serif">
                 <Calendar className="w-4 h-4 text-gold-400" />
-                <span>Wednesday, 25th November 2026 • 07:00 PM</span>
+                <span>Wednesday, 25th November 2026 • Arrival of Barat: 07:00 PM</span>
               </div>
             </div>
 
