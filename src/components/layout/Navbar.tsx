@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
-import { Volume2, VolumeX, Sparkles, Monitor, Smartphone, Layers } from 'lucide-react';
+import { Sparkles, Monitor, Smartphone, Layers } from 'lucide-react';
 import { GraphicMode } from '../../hooks/useWebGLSupport';
 import { weddingConfig } from '../../config/wedding';
 
 interface NavbarProps {
   isOpened: boolean;
-  isPlayingAudio: boolean;
-  onToggleAudio: () => void;
   graphicMode: GraphicMode;
   onChangeGraphicMode: (mode: GraphicMode) => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   isOpened,
-  isPlayingAudio,
-  onToggleAudio,
   graphicMode,
   onChangeGraphicMode
 }) => {
@@ -57,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
         )}
 
-        {/* Right Controls: 3D Mode Toggle & Audio */}
+        {/* Right Controls: 3D Graphics Mode Switcher */}
         <div className="flex items-center gap-2">
           {/* Graphics Mode Selector Dropdown */}
           <div className="relative">
@@ -117,20 +113,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             )}
           </div>
-
-          {/* Audio Button */}
-          <button
-            onClick={onToggleAudio}
-            className="p-2 rounded-full bg-emerald-900/60 border border-gold-500/30 text-gold-300 hover:text-gold-100 hover:border-gold-400 transition-colors cursor-pointer"
-            aria-label={isPlayingAudio ? 'Mute Music' : 'Play Music'}
-            title={isPlayingAudio ? 'Mute Music' : 'Play Music'}
-          >
-            {isPlayingAudio ? (
-              <Volume2 className="w-4 h-4 text-gold-400 animate-pulse" />
-            ) : (
-              <VolumeX className="w-4 h-4 text-gold-500/80" />
-            )}
-          </button>
         </div>
       </div>
     </header>

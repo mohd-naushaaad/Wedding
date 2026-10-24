@@ -12,8 +12,6 @@ import { ClosingSection } from './components/invitation/ClosingSection';
 import { Navbar } from './components/layout/Navbar';
 import { FloatingActions } from './components/layout/FloatingActions';
 import { useWebGLSupport, GraphicMode } from './hooks/useWebGLSupport';
-import { useAudio } from './hooks/useAudio';
-import { weddingConfig } from './config/wedding';
 
 // Dynamic Import for 3D Scene
 const GrandEntranceCanvas = lazy(() =>
@@ -24,7 +22,6 @@ const GrandEntranceCanvas = lazy(() =>
 
 export const App: React.FC = () => {
   const { mode, setMode, isSupported, prefersReducedMotion } = useWebGLSupport();
-  const { isPlaying, toggleAudio } = useAudio(weddingConfig.audio.src);
 
   const [isOpened, setIsOpened] = useState(false);
   const [openProgress, setOpenProgress] = useState(0);
@@ -34,10 +31,6 @@ export const App: React.FC = () => {
   // Smooth opening transition
   const handleOpenInvitation = () => {
     setIsOpened(true);
-    // User interacted: gentle ambient sound toggle
-    if (!isPlaying) {
-      toggleAudio();
-    }
 
     if (prefersReducedMotion) {
       setOpenProgress(1);
@@ -96,8 +89,6 @@ export const App: React.FC = () => {
       {/* Navigation Bar */}
       <Navbar
         isOpened={isOpened}
-        isPlayingAudio={isPlaying}
-        onToggleAudio={toggleAudio}
         graphicMode={mode}
         onChangeGraphicMode={(m: GraphicMode) => setMode(m)}
       />
@@ -107,8 +98,6 @@ export const App: React.FC = () => {
         isOpened={isOpened}
         onOpen={handleOpenInvitation}
         onSkip={handleSkipIntro}
-        isPlayingAudio={isPlaying}
-        onToggleAudio={toggleAudio}
       />
 
       {/* Main Invitation Narrative Sections (Revealed after opening) */}

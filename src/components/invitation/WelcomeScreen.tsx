@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MailOpen, Sparkles, Volume2, VolumeX, ArrowDown } from 'lucide-react';
+import { MailOpen, Sparkles, ArrowDown } from 'lucide-react';
 import { OrnamentalDivider } from '../ui/OrnamentalDivider';
 import { weddingConfig } from '../../config/wedding';
 
@@ -8,16 +8,12 @@ interface WelcomeScreenProps {
   isOpened: boolean;
   onOpen: () => void;
   onSkip: () => void;
-  isPlayingAudio: boolean;
-  onToggleAudio: () => void;
 }
 
 export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
   isOpened,
   onOpen,
-  onSkip,
-  isPlayingAudio,
-  onToggleAudio
+  onSkip
 }) => {
   return (
     <AnimatePresence>
@@ -28,26 +24,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
           exit={{ opacity: 0, transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] } }}
           className="fixed inset-0 z-40 flex flex-col items-center justify-between p-6 sm:p-10 select-none overflow-hidden"
         >
-          {/* Top Audio & Quick Actions Header */}
-          <div className="w-full flex items-center justify-between max-w-4xl z-20">
-            <button
-              onClick={onToggleAudio}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-900/60 backdrop-blur-md border border-gold-500/30 text-gold-300 text-xs sm:text-sm hover:border-gold-300 transition-colors cursor-pointer"
-              aria-label={isPlayingAudio ? 'Mute ambient royal music' : 'Play ambient royal music'}
-            >
-              {isPlayingAudio ? (
-                <>
-                  <Volume2 className="w-4 h-4 text-gold-400 animate-pulse" />
-                  <span className="font-serif">Audio On</span>
-                </>
-              ) : (
-                <>
-                  <VolumeX className="w-4 h-4 text-gold-500/80" />
-                  <span className="font-serif">Audio Off</span>
-                </>
-              )}
-            </button>
-
+          {/* Top Header */}
+          <div className="w-full flex items-center justify-end max-w-4xl z-20">
             <button
               onClick={onSkip}
               className="text-xs sm:text-sm font-serif tracking-wider text-gold-300/80 hover:text-gold-200 transition-colors underline decoration-gold-500/40 underline-offset-4 cursor-pointer"
@@ -63,7 +41,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
             transition={{ duration: 1.0, delay: 0.2 }}
             className="flex flex-col items-center text-center max-w-lg z-20 my-auto"
           >
-            {/* Tasteful Crescent & Star Royal Finial */}
+            {/* Tasteful Crescent & Star Finial */}
             <div className="w-16 h-16 rounded-full border border-gold-400/50 flex items-center justify-center bg-emerald-900/40 backdrop-blur-sm shadow-gold-glow mb-6">
               <svg className="w-8 h-8 text-gold-300" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.82 0 3.53-.5 5-1.35-2.99-1.73-5-4.95-5-8.65s2.01-6.92 5-8.65C15.53 2.5 13.82 2 12 2z" />
