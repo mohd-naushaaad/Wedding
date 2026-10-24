@@ -66,14 +66,6 @@ export interface WeddingConfig {
         lng: number;
       };
     };
-    receptionVenue?: {
-      name: string;
-      city: string;
-      address: string;
-      dateFormatted: string;
-      timing: string;
-      googleMapsUrl: string;
-    };
   };
   events: WeddingEvent[];
   rsvp: {

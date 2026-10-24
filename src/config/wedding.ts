@@ -58,15 +58,6 @@ export const weddingConfig: WeddingConfig = {
         lat: 24.6315,
         lng: 83.9427
       }
-    },
-
-    receptionVenue: {
-      name: "Madrasa Neyaziya Nezamiya",
-      city: "Akbarpur, Rohtas, Bihar",
-      address: "Madrasa Neyaziya Nezamiya, Akbarpur, Rohtas, Bihar",
-      dateFormatted: "Friday, 27th November 2026",
-      timing: "07:00 PM",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Madrasa+Neyaziya+Nezamiya+Akbarpur+Rohtas+Bihar"
     }
   },
 
@@ -140,21 +131,6 @@ export const weddingConfig: WeddingConfig = {
       venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar",
       note: "Accompanied by heartfelt Quranic Duas and family blessings.",
       googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Moon+Star+Marriage+Hall+Above+Hamid+Super+Market+Near+Bank+of+India+Akbarpur+Rohtas+Bihar",
-      enabled: true
-    },
-    {
-      id: "walima",
-      title: "Dawat-e-Walima (Reception)",
-      subtitle: "Celebratory royal banquet reception hosted in honour of the bride and groom",
-      date: "Friday, 27th November 2026",
-      dateISO: "2026-11-27",
-      startTime: "07:00 PM",
-      endTime: "11:30 PM",
-      venueName: "Madrasa Neyaziya Nezamiya",
-      venueAddress: "Madrasa Neyaziya Nezamiya, Akbarpur, Rohtas, Bihar",
-      dressCode: "Imperial Formal Attire / Sherwani & Elegance",
-      note: "Hosted with best compliments by Abdul Quaiyum Idrisi (Beauty Tailor).",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Madrasa+Neyaziya+Nezamiya+Akbarpur+Rohtas+Bihar",
       enabled: true
     }
   ],

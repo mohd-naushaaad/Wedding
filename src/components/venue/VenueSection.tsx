@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Navigation, Phone, MessageCircle, ExternalLink, Calendar, Building2 } from 'lucide-react';
+import { MapPin, Navigation, Phone, MessageCircle, ExternalLink, Calendar, Home } from 'lucide-react';
 import { IslamicBorder } from '../ui/IslamicBorder';
 import { OrnamentalDivider } from '../ui/OrnamentalDivider';
 import { weddingConfig } from '../../config/wedding';
 
 export const VenueSection: React.FC = () => {
-  const { mainVenue, receptionVenue } = weddingConfig.ceremony;
+  const { mainVenue } = weddingConfig.ceremony;
   const { contacts, hosts } = weddingConfig;
 
   // Intent-friendly Google Maps link for mobile/desktop
@@ -19,10 +19,10 @@ export const VenueSection: React.FC = () => {
           Location &amp; Coordinates
         </span>
         <h2 className="font-serif text-3xl sm:text-5xl font-bold text-gold-gradient tracking-tight">
-          Venues &amp; Directions
+          Venue &amp; Directions
         </h2>
         <p className="font-serif italic text-sm sm:text-base text-ivory/80 max-w-md mx-auto">
-          We eagerly await welcoming you into the joyous celebrations.
+          We eagerly await welcoming you to the blessed wedding celebrations.
         </p>
         <OrnamentalDivider variant="crescent" className="w-40 mx-auto" />
       </div>
@@ -34,7 +34,7 @@ export const VenueSection: React.FC = () => {
         transition={{ duration: 0.9 }}
         className="space-y-8"
       >
-        {/* 1. Main Venue: Moon Star Marriage Hall (Solemn Nikah & Barat) */}
+        {/* 1. Main Wedding Venue: Moon Star Marriage Hall (Nikah Ceremony) */}
         <IslamicBorder variant="emerald" className="space-y-6">
           <div className="flex flex-col md:flex-row items-start justify-between gap-6">
             <div className="space-y-3 max-w-xl">
@@ -79,7 +79,7 @@ export const VenueSection: React.FC = () => {
                 Prominent Landmarks
               </span>
               <p className="text-xs sm:text-sm text-ivory/80 font-sans mt-0.5">
-                Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas
+                Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar
               </p>
             </div>
             <a
@@ -93,62 +93,30 @@ export const VenueSection: React.FC = () => {
           </div>
         </IslamicBorder>
 
-        {/* 2. Reception (Walima) Venue & Bride's Residence Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Reception Venue */}
-          {receptionVenue && (
-            <IslamicBorder variant="emerald" className="space-y-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-[11px] font-serif uppercase tracking-wider border border-gold-500/30">
-                <Building2 className="w-3 h-3 text-gold-400" />
-                Reception (Walima) Venue
-              </span>
-
-              <h4 className="font-serif text-xl sm:text-2xl text-gold-gradient font-bold">
-                {receptionVenue.name}
-              </h4>
-
-              <p className="text-xs sm:text-sm text-ivory/80 font-sans">
-                {receptionVenue.address}
-              </p>
-
-              <div className="text-xs text-gold-400 font-serif">
-                {receptionVenue.dateFormatted} • {receptionVenue.timing}
-              </div>
-
-              <div className="pt-2">
-                <a
-                  href={receptionVenue.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/15 hover:bg-gold-500/25 text-gold-300 text-xs font-serif uppercase tracking-wider border border-gold-500/30 transition-colors"
-                >
-                  <Navigation className="w-3.5 h-3.5" />
-                  <span>Reception Map</span>
-                </a>
-              </div>
-            </IslamicBorder>
-          )}
-
-          {/* Bride's Family Residence in Delhi */}
-          <IslamicBorder variant="emerald" className="space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-800/40 text-emerald-300 text-[11px] font-serif uppercase tracking-wider border border-emerald-500/30">
-              <MapPin className="w-3 h-3 text-emerald-400" />
-              Bride's Family Residence (Delhi)
+        {/* 2. Bride's Family Residence Card */}
+        <IslamicBorder variant="emerald" className="space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-gold-500/20 pb-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-800/40 text-emerald-300 text-xs font-serif uppercase tracking-wider border border-emerald-500/30">
+              <Home className="w-3.5 h-3.5 text-emerald-400" />
+              Bride's Family Residence (From .. Md Nizamuddin)
             </span>
+            <span className="text-xs text-gold-400/80 font-serif">
+              Host Family • South East Delhi
+            </span>
+          </div>
 
-            <h4 className="font-serif text-xl sm:text-2xl text-ivory font-bold">
+          <div>
+            <h4 className="font-serif text-xl sm:text-2xl text-gold-gradient font-bold">
               {hosts.brideFatherName}
             </h4>
-
-            <p className="text-xs sm:text-sm text-ivory/80 font-sans leading-relaxed">
+            <p className="text-xs sm:text-sm text-ivory/90 font-sans leading-relaxed mt-1">
               {hosts.brideAddress}
             </p>
-
-            <p className="text-xs text-gold-400/80 font-serif italic pt-1">
-              Near Labour Chowk, Pul Pehladpur, South East Delhi
+            <p className="text-xs text-gold-400/80 font-serif italic mt-1">
+              Near Labour Chowk, Pul Pehladpur, South East Delhi, Delhi - 110044
             </p>
-          </IslamicBorder>
-        </div>
+          </div>
+        </IslamicBorder>
 
         {/* 3. Family Hospitality Coordinators */}
         {contacts && contacts.length > 0 && (
