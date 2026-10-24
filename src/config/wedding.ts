@@ -52,11 +52,11 @@ export const weddingConfig: WeddingConfig = {
     mainVenue: {
       name: "Moon Star Marriage Hall",
       city: "Akbarpur, Rohtas, Bihar",
-      address: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Moon+Star+Marriage+Hall+Above+Hamid+Super+Market+Near+Bank+of+India+Akbarpur+Rohtas+Bihar",
+      address: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar 821311",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       coordinates: {
-        lat: 24.6315,
-        lng: 83.9427
+        lat: 24.6350967,
+        lng: 83.9629708
       }
     }
   },
@@ -71,10 +71,10 @@ export const weddingConfig: WeddingConfig = {
       startTime: "07:00 PM",
       endTime: "10:30 PM",
       venueName: "Bride's Residence / Marriage Lawn",
-      venueAddress: "Akbarpur Celebration Lawn",
+      venueAddress: "Akbarpur Celebration Lawn, Rohtas, Bihar 821311",
       dressCode: "Festive Yellow / Traditional Elegance",
       note: "Family gathering with dinner and traditional wedding singing.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     },
     {
@@ -86,9 +86,9 @@ export const weddingConfig: WeddingConfig = {
       startTime: "After Fajr",
       endTime: "10:00 AM",
       venueName: "Family Residence",
-      venueAddress: "Akbarpur, Ward No. 2, Rohtas, Bihar",
+      venueAddress: "Akbarpur, Ward No. 2, Rohtas, Bihar 821311",
       note: "Starting the blessed wedding week with remembrance of Allah (Dhikr) and Dua.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     },
     {
@@ -100,9 +100,9 @@ export const weddingConfig: WeddingConfig = {
       startTime: "08:00 PM",
       endTime: "11:00 PM",
       venueName: "Family Lawn",
-      venueAddress: "Akbarpur, Rohtas, Bihar",
+      venueAddress: "Akbarpur, Rohtas, Bihar 821311",
       note: "Traditional festive gathering on the eve of the Nikah.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     },
     {
@@ -113,10 +113,10 @@ export const weddingConfig: WeddingConfig = {
       dateISO: "2026-11-25",
       startTime: "07:00 PM",
       venueName: "Moon Star Marriage Hall",
-      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar",
+      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar 821311",
       dressCode: "Royal Festive Traditional Modest Attire",
       note: "Warm reception and traditional welcome of the Barat.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Moon+Star+Marriage+Hall+Above+Hamid+Super+Market+Near+Bank+of+India+Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     },
     {
@@ -128,10 +128,10 @@ export const weddingConfig: WeddingConfig = {
       startTime: "08:00 PM",
       endTime: "11:30 PM",
       venueName: "Moon Star Marriage Hall",
-      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar",
+      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar 821311",
       dressCode: "Royal Festive Traditional Modest Attire",
       note: "Solemnization of Nikah and Dua, followed by celebratory Dawat-e-Nikah feast.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Moon+Star+Marriage+Hall+Above+Hamid+Super+Market+Near+Bank+of+India+Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     },
     {
@@ -142,9 +142,9 @@ export const weddingConfig: WeddingConfig = {
       dateISO: "2026-11-26",
       startTime: "06:00 AM",
       venueName: "Moon Star Marriage Hall",
-      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar",
+      venueAddress: "Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar 821311",
       note: "Accompanied by heartfelt Quranic Duas and family blessings.",
-      googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Moon+Star+Marriage+Hall+Above+Hamid+Super+Market+Near+Bank+of+India+Akbarpur+Rohtas+Bihar",
+      googleMapsUrl: "https://www.google.com/maps/place/Akbar+Pur,+Bihar+821311/@24.6328642,83.9618751,15.63z/data=!4m6!3m5!1s0x398c4853297791ff:0x245916ef83d09246!8m2!3d24.6350967!4d83.9629708!16s%2Fg%2F1ttpf8yk!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
       enabled: true
     }
   ],

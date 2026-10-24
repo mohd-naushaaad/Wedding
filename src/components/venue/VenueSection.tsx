@@ -72,6 +72,32 @@ export const VenueSection: React.FC = () => {
             </div>
           </div>
 
+          {/* Interactive Google Map Embed */}
+          <div className="relative w-full h-64 sm:h-72 rounded-xl overflow-hidden border border-gold-500/30 shadow-inner bg-emerald-950/60">
+            <iframe
+              title="Moon Star Marriage Hall Akbarpur Location"
+              src={`https://maps.google.com/maps?q=${mainVenue.coordinates?.lat ?? 24.6350967},${mainVenue.coordinates?.lng ?? 83.9629708}&hl=en&z=15&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            />
+            <div className="absolute top-2 right-2">
+              <a
+                href={mapsSearchUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/90 hover:bg-emerald-900 text-gold-300 text-xs font-serif border border-gold-400/40 shadow-md backdrop-blur-sm transition-colors"
+              >
+                <span>View Full Map</span>
+                <ExternalLink className="w-3 h-3 text-gold-400" />
+              </a>
+            </div>
+          </div>
+
           {/* Landmark Banner */}
           <div className="p-4 rounded-xl bg-[#031713]/80 border border-gold-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <div>
@@ -79,7 +105,7 @@ export const VenueSection: React.FC = () => {
                 Prominent Landmarks
               </span>
               <p className="text-xs sm:text-sm text-ivory/80 font-sans mt-0.5">
-                Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar
+                Above Hamid Super Market, Near Bank of India, Akbarpur, Rohtas, Bihar 821311
               </p>
             </div>
             <a
