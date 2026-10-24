@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Volume2, VolumeX, Share2, Sparkles, Monitor, Smartphone, Layers } from 'lucide-react';
+import { Volume2, VolumeX, Sparkles, Monitor, Smartphone, Layers } from 'lucide-react';
 import { GraphicMode } from '../../hooks/useWebGLSupport';
 import { weddingConfig } from '../../config/wedding';
 
@@ -7,7 +7,6 @@ interface NavbarProps {
   isOpened: boolean;
   isPlayingAudio: boolean;
   onToggleAudio: () => void;
-  onOpenShare: () => void;
   graphicMode: GraphicMode;
   onChangeGraphicMode: (mode: GraphicMode) => void;
 }
@@ -16,7 +15,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   isOpened,
   isPlayingAudio,
   onToggleAudio,
-  onOpenShare,
   graphicMode,
   onChangeGraphicMode
 }) => {
@@ -59,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
         )}
 
-        {/* Right Controls: Audio, 3D Mode Toggle, Share */}
+        {/* Right Controls: 3D Mode Toggle & Audio */}
         <div className="flex items-center gap-2">
           {/* Graphics Mode Selector Dropdown */}
           <div className="relative">
@@ -132,16 +130,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             ) : (
               <VolumeX className="w-4 h-4 text-gold-500/80" />
             )}
-          </button>
-
-          {/* Share Button */}
-          <button
-            onClick={onOpenShare}
-            className="p-2 sm:px-3 sm:py-1.5 rounded-full bg-gradient-to-r from-gold-600 to-gold-400 text-emerald-950 font-serif font-semibold text-xs tracking-wider uppercase flex items-center gap-1.5 hover:shadow-gold-glow transition-all cursor-pointer"
-            aria-label="Share Invitation"
-          >
-            <Share2 className="w-3.5 h-3.5 text-emerald-950" />
-            <span className="hidden sm:inline">Share</span>
           </button>
         </div>
       </div>

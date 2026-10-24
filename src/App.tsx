@@ -11,7 +11,6 @@ import { FamilyMessageSection } from './components/invitation/FamilyMessageSecti
 import { ClosingSection } from './components/invitation/ClosingSection';
 import { Navbar } from './components/layout/Navbar';
 import { FloatingActions } from './components/layout/FloatingActions';
-import { ShareModal } from './components/sharing/ShareModal';
 import { useWebGLSupport, GraphicMode } from './hooks/useWebGLSupport';
 import { useAudio } from './hooks/useAudio';
 import { weddingConfig } from './config/wedding';
@@ -29,7 +28,6 @@ export const App: React.FC = () => {
 
   const [isOpened, setIsOpened] = useState(false);
   const [openProgress, setOpenProgress] = useState(0);
-  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
   const animFrameRef = useRef<number | null>(null);
 
@@ -100,7 +98,6 @@ export const App: React.FC = () => {
         isOpened={isOpened}
         isPlayingAudio={isPlaying}
         onToggleAudio={toggleAudio}
-        onOpenShare={() => setIsShareModalOpen(true)}
         graphicMode={mode}
         onChangeGraphicMode={(m: GraphicMode) => setMode(m)}
       />
@@ -150,13 +147,6 @@ export const App: React.FC = () => {
       {/* Mobile Floating Thumb Navigation Bar */}
       <FloatingActions
         isOpened={isOpened}
-        onOpenShare={() => setIsShareModalOpen(true)}
-      />
-
-      {/* WhatsApp Sharing Dialog Modal */}
-      <ShareModal
-        isOpen={isShareModalOpen}
-        onClose={() => setIsShareModalOpen(false)}
       />
     </div>
   );
